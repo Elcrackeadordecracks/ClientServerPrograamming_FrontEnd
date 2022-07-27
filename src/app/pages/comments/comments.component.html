@@ -1,0 +1,54 @@
+<div class="container" *ngIf="postFound;">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="blog-posts single-post">
+          <article class="post post-large blog-single-post">
+            
+  
+            <div class="post-content">
+              <div class="post-block post-comments clearfix">
+                <h3>
+                  <i class="fa fa-comments"></i>Comments ({{ comments.length }})
+                </h3>
+  
+                <ul class="comments">
+                  <li *ngFor="let comment of comments">
+                    <div class="comment">
+                      <div class="img-thumbnail">
+                        <img
+                          class="avatar"
+                          alt=""
+                          
+                        />
+                      </div>
+                      <div class="comment-block">
+                        <div class="comment-arrow"></div>
+                        <span class="comment-by">
+                          <strong style="margin-right: 20px;">{{ comment.name }}</strong>
+                          <span class="pull-right">
+                            <span>
+                              <a href="#"
+                                ><i class="fa fa-reply"></i> Reply</a
+                              ></span
+                            >
+                          </span>
+                        </span>
+                        <p>
+                          {{ comment.comment }}
+                        </p>
+                        <span class="date pull-right"
+                          >Today</span
+                        >
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+        
